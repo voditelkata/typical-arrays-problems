@@ -1,12 +1,28 @@
 
-exports.min = function min (array) {
-  return 0;
+exports.min = function min(array) {
+    if (!Array.isArray(array) || !array.length) {
+        return 0;
+    }
+    let minValue = array[0];
+    for (let i = 1; i < array.length; i++) {
+        if (array[i] < minValue)
+            minValue = array[i];
+    }
+    return minValue;
 }
 
-exports.max = function max (array) {
-  return 0;
+exports.max = function max(array) {
+    if (!Array.isArray(array) || !array.length) {
+        return 0;
+    }
+    let maxValue = array[0];
+    for (let i = 1; i < array.length; i++) {
+        if (array[i] > maxValue)
+            maxValue = array[i];
+    }
+    return maxValue;
 }
 
-exports.avg = function avg (array) {
-  return 0;
+exports.avg = function avg(array) {
+    return 0;
 }
