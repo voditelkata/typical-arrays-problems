@@ -24,5 +24,9 @@ exports.max = function max(array) {
 }
 
 exports.avg = function avg(array) {
-    return 0;
+    if (!Array.isArray(array) || !array.length) {
+        return 0;
+    }
+    let  average = array.reduce((sum, current) => sum + current, 0)/array.length;
+    return average;
 }
